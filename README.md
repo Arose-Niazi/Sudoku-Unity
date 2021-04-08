@@ -43,3 +43,6 @@
 ![](https://raw.githubusercontent.com/Arose-Niazi/Sudoku-Unity/main/Screenshots/7.png)
 
 ![](https://raw.githubusercontent.com/Arose-Niazi/Sudoku-Unity/main/Screenshots/8.png)
+
+
+Youtube Preview: https://youtu.be/jCxcFt0i4Zs
