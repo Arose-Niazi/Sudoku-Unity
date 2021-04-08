@@ -1,18 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public class Settings : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static float Volume = 1f;
+    public AudioSource Soruce;
+    public static int Missing;
+    public static Sprite Background;
+    
+    private void Awake()
     {
-        
+        if(Soruce != null)
+            Soruce.volume = Volume;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void VolumeChange(Single volume)
     {
-        
+        Volume = volume;
+        Soruce.volume = Volume;
     }
+    
 }

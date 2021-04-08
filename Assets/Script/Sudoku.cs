@@ -158,15 +158,12 @@ public class Sudoku
 		while (count != 0)
 		{
 			int cellId = RandomGenerator(_size*_size);
-
-			// System.out.println(cellId);
-			// extract coordinates i and j
+			
 			int i = (cellId/_size) % 9;
 			int j = cellId % 9;
 			if (j != 0)
 				j = j - 1;
-
-			// System.out.println(i+" "+j);
+			
 			if (_matrix[i,j] != 0)
 			{
 				count--;
@@ -185,8 +182,23 @@ public class Sudoku
 		return _solution[x, y];
 	}
 
-	public bool IsCorrect(int x, int y, int value)
+	public void SetValue(int x, int y, int value)
 	{
-		return (_solution[x, y] == value);
+		_matrix[x, y] = value;
+	}
+
+	public bool IsCorrect(int x, int y)
+	{
+		return (_solution[x, y] == _matrix[x,y]);
+	}
+
+	public bool Completed()
+	{
+		for(int x = 0; x<_size; x++)
+			for (int y = 0; y < _size; y++)
+				if (_matrix[x, y] != _solution[x, y])
+					return false;
+
+		return true;
 	}
 }
