@@ -7,8 +7,8 @@ public class Settings : MonoBehaviour
     public AudioSource Soruce;
     public static int Missing;
     public static Sprite Background;
-    
-    private void Awake()
+
+    private void Update()
     {
         if(Soruce != null)
             Soruce.volume = Volume;
@@ -17,7 +17,6 @@ public class Settings : MonoBehaviour
     public void VolumeChange(Single volume)
     {
         Volume = volume;
-        Soruce.volume = Volume;
     }
     
 }
